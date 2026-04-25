@@ -1,0 +1,26 @@
+<div>
+  <h1>Qual melhor apelido pra usar pra aquela chata?</h1>
+  <div class="buttons">
+    <button (click)="responder('bruaca')" [disabled]="desabilitarBotao">Bruaca velha</button>
+    <button (click)="responder('bruxa')" [disabled]="desabilitarBotao">Bruxa nojenta</button>
+    <button (click)="responder('brucutu')" [disabled]="desabilitarBotao">Brucutu dos infernos</button>
+  <div>
+
+  <div *ngIf="resposta === 'bruaca'">
+    <p>Odeio aquela bruaca velha</p>
+    <p>Quero que ela se foda</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'bruxa'">
+    <p>Aquela bruxa nojenta</p>
+    <p>Quero que ela se foda</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'brucutu'">
+    <p>Aquela brucutu dos infernos</p>
+    <p>Que queime com os demónios</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+</div>

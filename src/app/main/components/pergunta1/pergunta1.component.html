@@ -1,0 +1,19 @@
+<div>
+  <h1>Seu nome é Luísa?</h1>
+  <div class="buttons">
+    <button id="nobtn" (click)="responder('true')" [disabled]="desabilitarBotao">Sim</button>
+    <button id="yesbtn" (click)="responder('false')" [disabled]="desabilitarBotao">Não</button>
+  </div>
+
+  <div *ngIf="resposta === 'true'">
+    <p>Certa resposta</p>
+    <p>Bora pra proxima</p>
+    <button (click)="proxima()">Próxima pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'false'">
+    <p>Não? Meu pau na sua mão</p>
+    <p>Tenta de novo ai</p>
+    <button (click)="voltar()">Voltar pergunta</button>
+  </div>
+</div>

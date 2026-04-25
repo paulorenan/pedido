@@ -1,0 +1,19 @@
+<div>
+  <h1>Quem você prefere?</h1>
+  <div class="buttons">
+    <button (click)="responder('weeknd')" [disabled]="desabilitarBotao">Abel (The weeknd)</button>
+    <button (click)="responder('maria')" [disabled]="desabilitarBotao">Justin Bieber</button>
+  </div>
+
+  <div *ngIf="resposta === 'weeknd'">
+    <p>Hmm, deixa o Justin saber disso</p>
+    <p>Não vai te convidar pro aniversario de um ano do filho dele</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'maria'">
+    <p>Acho que o Abel vai se sentir Less than zero </p>
+    <p>Vai que ele faz uma musica falando dessa decepção</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+</div>

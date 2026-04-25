@@ -1,0 +1,64 @@
+html {
+  background: #8E2DE2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.title-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  border: 5px solid #ccc;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.pergunta {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.pergunta-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  border: 5px solid #ccc;
+  margin-top: 50px;
+}
+
+button {
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #7d2ae8;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas de igual tamanho */
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+.buttons button {
+  width: 100%; /* Os botões ocupam toda a largura da célula */
+}
+
+.buttons button:nth-child(odd):last-child {
+  grid-column: 1 / -1; /* Se houver um botão restante sozinho, ele ocupa toda a linha */
+  justify-self: center; /* Alinha o botão ao centro */
+}

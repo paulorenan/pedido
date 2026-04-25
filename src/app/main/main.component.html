@@ -1,0 +1,18 @@
+<main>
+  <div class="title-box">
+    <h1>Bem vindo as perguntas do notebook</h1>
+    <h2>Perguntas para testar suas habilidades</h2>
+  </div>
+  <div class="pergunta-box">
+    <p *ngIf="numeroPergunta !== 9" class="pergunta">Pergunta nº {{numeroPergunta}}</p>
+    <app-pergunta1 *ngIf="numeroPergunta === 1" (proximaPergunta)="proximaPergunta($event)"></app-pergunta1>
+    <app-pergunta2 *ngIf="numeroPergunta === 2" (proximaPergunta)="proximaPergunta($event)"></app-pergunta2>
+    <app-pergunta3 *ngIf="numeroPergunta === 3" (proximaPergunta)="proximaPergunta($event)"></app-pergunta3>
+    <app-pergunta4 *ngIf="numeroPergunta === 4" (proximaPergunta)="proximaPergunta($event)"></app-pergunta4>
+    <app-pergunta5 *ngIf="numeroPergunta === 5" (proximaPergunta)="proximaPergunta($event)"></app-pergunta5>
+    <app-pergunta6 *ngIf="numeroPergunta === 6" (proximaPergunta)="proximaPergunta($event)"></app-pergunta6>
+    <app-pergunta7 *ngIf="numeroPergunta === 7" (proximaPergunta)="proximaPergunta($event)"></app-pergunta7>
+    <app-pergunta8 *ngIf="numeroPergunta === 8" (proximaPergunta)="proximaPergunta($event)"></app-pergunta8>
+    <app-aceite *ngIf="numeroPergunta === 9"></app-aceite>
+  </div>
+</main>

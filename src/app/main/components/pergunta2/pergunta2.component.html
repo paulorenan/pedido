@@ -1,0 +1,33 @@
+<div>
+  <h1>Qual o nome do seu Gato?</h1>
+  <div class="buttons">
+    <button (click)="responder('marqui')" [disabled]="desabilitarBotao">Marquito</button>
+    <button (click)="responder('cap')" [disabled]="desabilitarBotao">Capitu</button>
+    <button (click)="responder('certo')" [disabled]="desabilitarBotao">Romeu</button>
+    <button (click)="responder('frodo')" [disabled]="desabilitarBotao">Frodo</button>
+  </div>
+
+  <div *ngIf="resposta === 'marqui'">
+    <p>Marquito? Meu pau no seu periquito</p>
+    <p>Acho que você é uma impostora ein</p>
+    <button (click)="voltar()">Tenta de novo</button>
+  </div>
+
+  <div *ngIf="resposta === 'cap'">
+    <p>Capitu? Meu pau no seu cu</p>
+    <p>Acho que você é uma impostora ein</p>
+    <button (click)="voltar()">Tenta de novo</button>
+  </div>
+
+  <div *ngIf="resposta === 'certo'">
+    <p>Certa resposta</p>
+    <p>Bora pra proxima</p>
+    <button (click)="proxima()">Próxima pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'frodo'">
+    <p>Frodo? Meu pau te passa o rodo</p>
+    <p>Acho que você é uma impostora ein</p>
+    <button (click)="voltar()">Tenta de novo</button>
+  </div>
+</div>

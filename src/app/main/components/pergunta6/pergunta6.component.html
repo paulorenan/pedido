@@ -1,0 +1,34 @@
+<div>
+  <h1>Qual dessas receitas você vai fazer pra mim?</h1>
+
+  <div class="buttons">
+    <button (click)="responder('torta')" [disabled]="desabilitarBotao">Torta de banana</button>
+    <button (click)="responder('banof')" [disabled]="desabilitarBotao">Banoffe</button>
+    <button (click)="responder('pave')" [disabled]="desabilitarBotao">Pavê ouro branco</button>
+    <button (click)="responder('holandesa')" [disabled]="desabilitarBotao">Torta Holandesa</button>
+  </div>
+
+  <div *ngIf="resposta === 'torta'">
+    <p>Hmm, tortinha de banana</p>
+    <p>Quero ver se você sabe fazer</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'banof'">
+    <p>Até agora não sei o que é banoffe</p>
+    <p>Mas vou comer de qualquer jeito</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'pave'">
+    <p>Pavezinho de ouro branco</p>
+    <p>Já to com agua na boca</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'holandesa'">
+    <p>Essa é minha especialidade</p>
+    <p>Te auxilio no processo</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+</div>

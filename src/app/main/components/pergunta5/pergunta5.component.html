@@ -1,0 +1,33 @@
+<div>
+  <h1>Rolê pra fazer antes do fim do ano</h1>
+  <div class="buttons">
+    <button (click)="responder('praia')" [disabled]="desabilitarBotao">Fim de semana na Praia</button>
+    <button (click)="responder('chale')" [disabled]="desabilitarBotao">Chale em lumiar</button>
+    <button (click)="responder('vinho')" [disabled]="desabilitarBotao">Noite de vinho</button>
+    <button (click)="responder('cale')" [disabled]="desabilitarBotao">Subir o Caledônia</button>
+  </div>
+
+  <div *ngIf="resposta === 'praia'">
+    <p>Então só falta escolher a cidade</p>
+    <p>Quero ir pra praia</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'chale'">
+    <p>Fim de semana no friozinho de Friburgo</p>
+    <p>Ja vou ver o airbnb</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'vinho'">
+    <p>Noite de fondue e vinho</p>
+    <p>Quem sabe um queijo</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+
+  <div *ngIf="resposta === 'cale'">
+    <p>Então vai subir o cruzeiro da paz primeiro</p>
+    <p>Quero ver o por do sol la de cima</p>
+    <button (click)="proxima()">Proxima Pergunta</button>
+  </div>
+</div>
